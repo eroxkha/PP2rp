@@ -17,6 +17,12 @@ STATE_GAME_OVER = "gameover"
 STATE_LEADERBOARD = "leaderboard"
 STATE_SETTINGS = "settings"
 
+# Инициализация звукового движка
+pygame.mixer.init()
+pygame.mixer.music.load("assets/music.mp3") 
+pygame.mixer.music.play(-1)
+pygame.mixer.music.set_volume(0.5)
+
 
 def main():
     pygame.init()
