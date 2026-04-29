@@ -120,7 +120,7 @@ class Obstacle:
     TYPES = [
         {"name": "oil",     "color": (40, 40, 80),   "w": 50, "h": 30},
         {"name": "barrier", "color": (220, 80, 0),   "w": 40, "h": 20},
-        {"name": "pothole", "color": (30, 30, 30),   "w": 35, "h": 25},
+        {"name": "pothole", "color": (0, 0, 0),   "w": 35, "h": 25},
     ]
 
     def __init__(self, lane):
@@ -162,7 +162,7 @@ class Coin:
         self.value = random.choices(values, weights=weights)[0]
         self.x = lane_x(lane)
         self.y = -20
-        self.radius = 12
+        self.radius = 20
 
     def update(self, scroll_speed):
         self.y += scroll_speed
