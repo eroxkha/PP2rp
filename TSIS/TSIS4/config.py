@@ -48,7 +48,7 @@ SPEED_PER_LEVEL = 1
 DB_CONFIG = {
     'host': 'localhost',
     'database': 'snake_game',
-    'user': 'eroxkha',
-    'password': 'Rerokha01',
+    'user': 'postgres',
+    'password': 'erok',
     'port': 5432
 }

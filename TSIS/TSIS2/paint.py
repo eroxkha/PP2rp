@@ -33,7 +33,6 @@ text_pos = None
 palette_rect = pygame.Rect(20, 50, 160, 150)
 
 def draw_palette():
-    """Рисует спектр цветов и яркости"""
     for i in range(160):
         for j in range(150):
             c = pygame.Color(0)
@@ -42,7 +41,6 @@ def draw_palette():
     pygame.draw.rect(screen, BLACK, palette_rect, 2)
 
 def draw_ui():
-    """Отрисовка левой панели управления"""
     pygame.draw.rect(screen, GRAY, (0, 0, 200, HEIGHT))
     
     # Палитра

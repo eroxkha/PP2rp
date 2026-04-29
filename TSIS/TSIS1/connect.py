@@ -3,7 +3,6 @@ import psycopg2
 from config import config
 
 def get_connection():
-    """Создает и возвращает объект соединения с БД"""
     try:
         params = config()
         conn = psycopg2.connect(**params)
