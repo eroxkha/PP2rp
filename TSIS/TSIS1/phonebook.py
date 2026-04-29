@@ -101,8 +101,6 @@ def view_paginated():
 def main_menu():
     while True:
         print("\n" + "="*30)
-        print("   PHONEBOOK EXTENDED v2.0")
-        print("="*30)
         print("1. Поиск (Advanced Search)")
         print("2. Экспорт в JSON")
         print("3. Импорт из JSON")

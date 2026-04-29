@@ -1,3 +1,4 @@
+import os
 import pygame
 import datetime
 import sys
@@ -144,11 +145,16 @@ while running:
             elif event.key == pygame.K_BACKSPACE: input_text = input_text[:-1]
             elif event.key == pygame.K_ESCAPE: text_pos = None
             else: input_text += event.unicode
-
+            
         if event.type == pygame.KEYDOWN and event.key == pygame.K_s and (pygame.key.get_mods() & pygame.KMOD_CTRL):
+            save_dir = "assets"
+            if not os.path.exists(save_dir):
+                os.makedirs(save_dir)
             fname = f"drawing_{datetime.datetime.now().strftime('%H%M%S')}.png"
-            pygame.image.save(canvas, fname)
-            print(f"Saved: {fname}")
+            path = os.path.join(save_dir, fname)
+            pygame.image.save(canvas, path)
+            print(f"Saved in assets: {path}")
+
     if drawing and tool in ['line', 'rect', 'circle']:
         canvas_origin = (220, 25)
         s_p = (start_pos[0] + 220, start_pos[1] + 25)
